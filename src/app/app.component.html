@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <div id="dragon">
+  <h1>{{ title }}</h1>
+  <form (submit)="onSubmit()" name = "myForm" #myForm="ngForm">
+    <select name="powerNum" type = "number" [(ngModel)]="powerNum">
+    <option *ngFor="let i of powerArray">{{i}}</option>
+    </select>
+  <button type="submit">Submit</button><br>
+  </form> 
+  <img src= "https://res.cloudinary.com/sfp/image/upload/c_fill,q_60/oth/FunimationStoreFront/1698249/Japanese/1698249_Japanese_ShowDetailHeaderDesktop_0b714f57-a4ae-e711-8175-020165574d09.jpg"><br>
+
+  <app-human [myPower]='powerNum'></app-human>
+  <app-saiyan [SaiyanPower]='powerNum'></app-saiyan>
+  <app-supersaiyan [SuperSaiyanPower]='powerNum'></app-supersaiyan><br>
+  <app-supersaiyantwo [SuperSaiyanTwoPower]='powerNum'></app-supersaiyantwo>
+  <app-supersaiyanthree [SuperSaiyanThreePower]='powerNum'></app-supersaiyanthree>
+  <app-supersaiyanfour [SuperSaiyanFourPower]='powerNum'></app-supersaiyanfour>
+  </div>
+
+
